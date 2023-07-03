@@ -36,11 +36,4 @@ They have arguments, attributes and meta-arguments
 - meta-arguments: Used to customize behaviour of modules and resources, not resource specific `count, depends_on, provider, lifecycle, provisioner, data etc. `
 -----------------------------------------------
 
-required_version = "~> 0.14.3" – this means allows only right most component to increment example, 0.14.5 / 0.14.10 is allowed but 0.15.X is not
-required_version = "= 0.14.3"-   
-required_version = "= 0.14.4"-
-required_version = ">= 0.13" - 
-required_version = "= 0.13"  -
-required_version = "~> 0.13" -
 
----------------------------------------------------------
