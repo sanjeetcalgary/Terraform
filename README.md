@@ -47,7 +47,7 @@ They have arguments, attributes and meta-arguments
 -----------------------------------------------
 ## Provider Authentication
 - As parameter 
-    ![Alt text](image.png)
+    ![Alt text](image-1.png)
 - As environment variable
     ![Alt text](image-1.png)
 - As config files located at `$~/.aws/config`
