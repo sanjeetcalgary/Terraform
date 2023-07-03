@@ -143,5 +143,41 @@ to delete, we have to remove this resource declaration section from config file 
 
 ![Alt text](image-21.png)
 
+-------------------------------------------------
+## Data Source
+Data sources allow Terraform to use information defined outside of Terraform, defined by another separate Terraform configuration, or modified by functions.
+
+![Alt text](image-23.png)
+
+![Alt text](image-24.png)
+
+## State locking
+
+![Alt text](image-25.png)
+
+Local state file: unless the state file is shared, team cannot work on the infra, to make that possible we opt for remote state storage
+
+Remote state file: this makes team work on the same state file, however it may give conflict issue. to solve that problem we opt for state locking
+
+![Alt text](image-26.png)
+
+## State commands
+-------------------------------------
+- Terraform show- used to inspect a plan to ensure that the planned operations are expected, or to inspect the current state as Terraform plan output files are binary files. We can read them using terraform show command
+
+- Terraform refresh- -	Changes made to infra manually on cloud console and not via terraform so state version is not updated in backend. Refresh will show you the changes by comparing the existing state file with current real infra state
+    + Choice_1: If you dont want those changes proceed with terraform apply so manual changes we have done on our cloud EC2 Instance will be removed.
+    + Choice_2: If you want those changes, refer terraform.tfstate file about changes and embed them in your terraform manifests (example: c4-ec2-instance.tf) and proceed with flow (referesh, plan, review execution plan and apply)
+
+Disater recovery
+-----------------------
+- The terraform state pull command and the terraform state push command can directly read and write entire state files from and to the configured backend. You might need this for obtaining or restoring a state backup.
+State pull:
+- The terraform state pull command is used to manually download and output the state from remote state.
+- This command also works with local state.
+
+State push:
+- The terraform state push command is used to manually upload a local state file to remote state.
+
 
 
