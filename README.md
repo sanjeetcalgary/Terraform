@@ -35,3 +35,4 @@ They have arguments, attributes and meta-arguments
 - Attributes: Data that belongs to an object, `<aws_instance.example.id>`
 - meta-arguments: Used to customize behaviour of modules and resources, not resource specific `count, depends_on, provider, lifecycle, provisioner, data etc. `
 -----------------------------------------------
+
