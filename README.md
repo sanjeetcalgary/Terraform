@@ -36,4 +36,6 @@ They have arguments, attributes and meta-arguments
 - meta-arguments: Used to customize behaviour of modules and resources, not resource specific `count, depends_on, provider, lifecycle, provisioner, data etc. `
 -----------------------------------------------
 
+<img width="479" alt="image" src="https://github.com/sanjeetcalgary/Terraform/assets/103237142/0d8b4971-b85d-474d-aa47-613bf48b9d28">
+
 
