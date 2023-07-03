@@ -109,3 +109,39 @@ to delete, we have to remove this resource declaration section from config file 
 
 ![Alt text](image-10.png)
 
+-----------------------------------------------
+## Input Variables
+- When you declare variables in the root module of your configuration, you can set their values using CLI options and environment variables
+- When you declare them in child modules, the calling module should pass values in the module block
+
+![Alt text](image-16.png)
+
+- Use precondition and postcondition blocks to create custom rules for resources, data sources, and outputs
+```
+    terraform plan -var-file="secrets.tfvars"
+    terraform apply -var-file="secrets.tfvars"
+
+```
+
+- Using input variable: `var.<NAME>`
+
+![Alt text](image-17.png)
+
+![Alt text](image-18.png)
+
+- Provide variable value at prompt - @plan, @apply, @destroy: leave the default field empty
+- Override deafult value through CLI- `terraform plan/apply -var="varName=varValue"`
+- Using environment variables- `export TF_VAR_varName=varValue`
+- Using tfvars files
+
+--------------------------------------------------
+## Output Variables
+-	Value= resource_type.local_name.attribute
+![Alt text](image-20.png)
+
+- These output values are stored in state file which can be queried using terraform output command
+
+![Alt text](image-21.png)
+
+
+
