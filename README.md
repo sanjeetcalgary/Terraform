@@ -39,3 +39,18 @@ They have arguments, attributes and meta-arguments
 <img width="479" alt="image" src="https://github.com/sanjeetcalgary/Terraform/assets/103237142/0d8b4971-b85d-474d-aa47-613bf48b9d28">
 
 
+-----------------------------------------------
+- Terraform automatically creates or updates the dependency lock file each time you run the terraform init command. 
+- The lock file is named as `.terraform.lock.hcl`
+- This file contains information like version, constraints, hashes, provider
+
+-----------------------------------------------
+## Provider Authentication
+- As parameter 
+    ![Alt text](image.png)
+- As environment variable
+    ![Alt text](image-1.png)
+- As config files located at `$~/.aws/config`
+    ![Alt text](image-2.png)
+
+--------------------------------------------
