@@ -88,7 +88,24 @@ They are used to change resource behaviour
 ## Lifecycle 
 used to manage the lifecycle of a resource. It provides a way to specify additional behavior that affects how Terraform handles changes to a resource.
 - create_before_destroy: This boolean value determines whether Terraform creates a new resource before destroying the old one. If set to true, Terraform will create a new resource before destroying the old one. This is useful for resources that can’t be updated in place, such as databases.
+![Alt text](image-12.png)
+
 - prevent_destroy: This boolean value determines whether Terraform can destroy a resource. If set to true, Terraform will prevent the resource from being destroyed. This is useful for resources that should never be deleted, such as production databases or key management systems.
+to delete, we have to remove this resource declaration section from config file and then when we apply , resource will be deleted
+![Alt text](image-13.png)
+
 - ignore_changes: This list of attributes determines which resource attributes Terraform should ignore when determining whether a change has occurred. If an attribute is listed here, Terraform will ignore changes to that attribute and not try to update it.
+![Alt text](image-15.png)
+
 - replace_triggered_by: 
 -----------------------------------------------
+- State file: It is a mapping between configuration file and resource on cloud
+- State file is a JSON file consisting of provider version, CLI version, Output, Resources detail
+- `terraform.tfstate.backup`- Another file created with terraform apply command
+- This file is like a version of the tfstate file. Whenever we modify something on our code and apply it, our tfstate file will change our resources’ information. At that point this backup file acts as an old version of the state file. So the modified resources details are in the tfstate file, and the old tfstate file will be transferred to tfstate.backup file
+
+- Desired State: Local Terraform Manifest (All *.tf files)
+- Current State: Real Resources present in your cloud
+
+![Alt text](image-10.png)
+
