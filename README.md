@@ -172,6 +172,7 @@ Remote state file: this makes team work on the same state file, however it may g
 Disater recovery
 -----------------------
 - The terraform state pull command and the terraform state push command can directly read and write entire state files from and to the configured backend. You might need this for obtaining or restoring a state backup.
+
 State pull:
 - The terraform state pull command is used to manually download and output the state from remote state.
 - This command also works with local state.
