@@ -13,5 +13,3 @@ provider "aws" {
   profile = "default"
 }
 
-
-
